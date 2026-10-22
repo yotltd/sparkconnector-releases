@@ -17,3 +17,10 @@ The collector does nothing by itself. It requires an active SPARK Dock account a
 ## Getting started
 
 Set up a SPARK Dock account first, then generate an enrolment code for a new collector from inside it. Which binary or image to use, and how to configure and link it, is covered by SPARK Dock's own collector setup flow, not by this repo.
+
+## Operator scripts
+
+`scripts/` holds one-time setup scripts for SPARK Dock's own infrastructure, built from the private source and published here so a server can fetch them without credentials. They contain no secrets.
+
+- `setup-spark-relay-hub.sh` -- sets up the outbound relay on the central hub (asks for the gateway domain and a contact email).
+- `jemasa-desktop-engine.sh` -- installs the local RDP/VNC engine on an existing collector appliance.
